@@ -44,22 +44,27 @@ def eliminar(datos):
 
 menu = False
 
-while menu == False:
- 
-    opcion = int(input("Menú interactivo\n1. Editar\n2. Eliminar\n3. Salir\n Digite una opción: "))
+def menu_interactivo(menu):
+    
 
-    if opcion == 1:
-        print("Editando...")
-        editar(datos)
-        menu = True
-    elif opcion == 2:
-        print("Eliminando...")
-        eliminar( datos)
-        
-    elif opcion == 3:
-        print("Saliendo del programa...")
-        break
-    else:
-        print("Opción no valida, intentelo denuevo.")
+    while menu == False:
+ 
+        opcion = int(input("Menú interactivo\n1. Editar\n2. Eliminar\n3. Salir\n Digite una opción: "))
+
+        if opcion == 1:
+            print("Editando...")
+            editar(datos)
+            menu = True
+        elif opcion == 2:
+            print("Eliminando...")
+            eliminar( datos)
+            
+        elif opcion == 3:
+            print("Saliendo del programa...")
+            break
+        else:
+            print("Opción no valida, intentelo denuevo.")
 
     print("----------------------------------------------")
+    
+menu_interactivo(menu)
